@@ -1,0 +1,161 @@
+================================================================================
+         ACUERDO DE LICENCIA DE USUARIO FINAL (EULA)
+         JORDI TECH-SERVICE — SOFTWARE PROPIETARIO
+================================================================================
+
+Versión 1.0 — Mayo 2026
+Aplicable a: RecuperaPRO · AuditorPRO · PrivBox AI
+
+© 2026 Jordi Tech-Service — Badalona, Catalunya, España
+Todos los derechos reservados.
+
+--------------------------------------------------------------------------------
+LEA ESTE DOCUMENTO DETENIDAMENTE ANTES DE INSTALAR O USAR EL SOFTWARE.
+Al instalar, copiar o utilizar el software, usted acepta quedar vinculado por
+los términos de este acuerdo. Si no acepta estos términos, no instale ni use
+el software.
+--------------------------------------------------------------------------------
+
+
+1. DEFINICIONES
+───────────────
+"Software" se refiere a cualquiera de los programas informáticos desarrollados
+por Jordi Tech-Service (RecuperaPRO, AuditorPRO, PrivBox AI), incluyendo todas
+sus versiones, actualizaciones, módulos complementarios, documentación asociada
+y archivos de instalación, tanto en versión escritorio como en versión portátil
+(USB/pen drive).
+
+"Autor" se refiere a Jordi Tech-Service, titular de todos los derechos de
+propiedad intelectual sobre el Software.
+
+"Usuario" se refiere a la persona física o jurídica que instala, copia o
+utiliza el Software.
+
+"Licencia" se refiere al derecho de uso personal e intransferible concedido
+al Usuario mediante este acuerdo.
+
+
+2. CONCESIÓN DE LICENCIA
+─────────────────────────
+El Autor concede al Usuario una licencia limitada, no exclusiva, no
+transferible e intransferible para:
+
+   a) Instalar y usar el Software en un único dispositivo de su propiedad o
+      bajo su control.
+
+   b) Realizar una única copia de seguridad del Software para uso personal
+      del propio Usuario.
+
+
+3. RESTRICCIONES
+─────────────────
+El Usuario NO puede, sin autorización escrita previa del Autor:
+
+   a) Copiar, distribuir, vender, alquilar, ceder, sublicenciar o transferir
+      el Software o cualquier parte del mismo a terceros.
+
+   b) Modificar, adaptar, traducir, descompilar, aplicar ingeniería inversa,
+      desensamblar o derivar código fuente del Software.
+
+   c) Usar el Software para prestar servicios a terceros de forma comercial
+      sin haber suscrito un acuerdo específico de licencia profesional o
+      de empresa con el Autor.
+
+   d) Eliminar, ocultar o alterar cualquier aviso de copyright, marca o
+      identificación de autoría presente en el Software.
+
+   e) Publicar benchmarks, análisis comparativos o resultados de pruebas del
+      Software sin consentimiento previo del Autor.
+
+   f) Usar el nombre "Jordi Tech-Service", "RecuperaPRO", "AuditorPRO" o
+      "PrivBox AI" para promocionar productos o servicios derivados.
+
+
+4. PROPIEDAD INTELECTUAL
+─────────────────────────
+El Software y toda su documentación son propiedad exclusiva del Autor y están
+protegidos por la legislación española e internacional sobre propiedad
+intelectual, en particular por el Real Decreto Legislativo 1/1996, de 12 de
+abril, por el que se aprueba el Texto Refundido de la Ley de Propiedad
+Intelectual.
+
+Este acuerdo no transfiere al Usuario ningún derecho de propiedad sobre el
+Software. El Usuario únicamente adquiere el derecho de uso conforme a los
+términos aquí establecidos.
+
+
+5. ACTUALIZACIONES
+───────────────────
+El Autor podrá publicar actualizaciones, correcciones o nuevas versiones del
+Software a su entera discreción. Las actualizaciones estarán sujetas a los
+términos de este acuerdo salvo que se indique expresamente lo contrario.
+
+
+6. ESTADO DEL SOFTWARE
+───────────────────────
+El Software se proporciona en su estado actual de desarrollo. Ha sido probado
+con discos reales en entorno personal y con compañeros, y funciona según lo
+especificado. No obstante, el Autor no garantiza que el Software esté libre de
+errores ni que sea apto para un uso específico determinado por el Usuario.
+
+Se recomienda realizar siempre una copia de seguridad de los datos antes de
+utilizar cualquier función de recuperación, borrado o clonación de discos.
+
+
+7. EXCLUSIÓN DE GARANTÍAS
+──────────────────────────
+EL SOFTWARE SE PROPORCIONA "TAL CUAL" (AS IS), SIN GARANTÍA DE NINGÚN TIPO,
+EXPRESA O IMPLÍCITA, INCLUYENDO PERO NO LIMITÁNDOSE A LAS GARANTÍAS DE
+COMERCIABILIDAD, IDONEIDAD PARA UN FIN PARTICULAR O NO INFRACCIÓN DE DERECHOS
+DE TERCEROS.
+
+El Autor no garantiza que el Software funcione de manera ininterrumpida, libre
+de errores ni que los defectos serán corregidos.
+
+
+8. LIMITACIÓN DE RESPONSABILIDAD
+──────────────────────────────────
+En ningún caso el Autor será responsable de daños directos, indirectos,
+incidentales, especiales, consecuentes o punitivos que resulten del uso o la
+imposibilidad de uso del Software, incluyendo pero no limitándose a:
+
+   · Pérdida de datos
+   · Pérdida de beneficios o ingresos
+   · Daños en equipos o soportes de almacenamiento
+   · Interrupción de la actividad del Usuario
+
+La responsabilidad total del Autor en relación con este acuerdo no superará en
+ningún caso el importe pagado por el Usuario por la licencia del Software.
+
+
+9. TERMINACIÓN
+───────────────
+Este acuerdo y la licencia concedida se extinguirán automáticamente si el
+Usuario incumple cualquiera de sus términos. Ante cualquier incumplimiento, el
+Usuario deberá cesar inmediatamente el uso del Software y destruir todas las
+copias en su poder.
+
+
+10. LEGISLACIÓN APLICABLE Y JURISDICCIÓN
+──────────────────────────────────────────
+Este acuerdo se regirá e interpretará de conformidad con la legislación
+española vigente. Para la resolución de cualquier controversia derivada de este
+acuerdo, las partes se someten a la jurisdicción de los Juzgados y Tribunales
+de Barcelona, con renuncia expresa a cualquier otro fuero que pudiera
+corresponderles.
+
+
+11. CONTACTO
+─────────────
+Para consultas sobre licencias, uso comercial, licencias de empresa o cualquier
+cuestión relacionada con este acuerdo:
+
+   Jordi Tech-Service
+   Badalona, Catalunya, España
+   jordi75954@gmail.com
+
+
+================================================================================
+© 2026 Jordi Tech-Service — Todos los derechos reservados
+RecuperaPRO · AuditorPRO · PrivBox AI son marcas de Jordi Tech-Service
+================================================================================

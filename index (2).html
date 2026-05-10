@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jordi Tech-Service — Recuperació de Dades · Seguretat · Peritatge</title>
+<meta name="description" content="Software professional de recuperació de dades i seguretat informàtica. Perit judicial. RecuperaPRO, AuditorPRO i PrivBox AI.">
+<link rel="icon" type="image/svg+xml" href="logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#12183a;--teal:#00b896;--teal2:#009e80;--light:#f7f9fc;--white:#ffffff;--border:#e4e9f0;--text:#1a2035;--text2:#5a6478;--text3:#9aa3b5}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1080px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.15rem;color:var(--navy);text-decoration:none}
+.logo em{color:var(--teal);font-style:normal}
+.nav-links{display:flex;align-items:center;gap:2rem}
+.nav-links a{color:var(--text2);text-decoration:none;font-size:0.88rem;font-weight:500;transition:color 0.2s}
+.nav-links a:hover{color:var(--teal)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.lang-switch{display:flex;border:1.5px solid var(--border);border-radius:8px;overflow:hidden}
+.lang-btn{padding:5px 13px;font-size:0.78rem;font-weight:600;cursor:pointer;border:none;background:none;color:var(--text2);transition:all 0.2s;font-family:'Inter',sans-serif}
+.lang-btn.active{background:var(--navy);color:#fff}
+.nav-cta{background:var(--teal);color:#fff;padding:9px 20px;border-radius:8px;text-decoration:none;font-size:0.85rem;font-weight:600;transition:background 0.2s}
+.nav-cta:hover{background:var(--teal2)}
+.hero{padding:140px 2rem 100px;position:relative;overflow:hidden}
+.hero-bg{position:absolute;top:0;right:0;width:55%;height:100%;background:linear-gradient(135deg,var(--light) 0%,#edf2ff 100%);clip-path:polygon(8% 0,100% 0,100% 100%,0 100%);z-index:0}
+.hero-inner{max-width:1080px;margin:0 auto;position:relative;z-index:1;display:grid;grid-template-columns:1.1fr 1fr;gap:5rem;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:#eaf9f5;border:1px solid #b3e8db;border-radius:100px;padding:7px 16px;font-size:0.78rem;color:var(--teal2);font-weight:600;margin-bottom:1.5rem}
+.dot{width:7px;height:7px;background:var(--teal);border-radius:50%;animation:blink 2s infinite;flex-shrink:0}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:800;line-height:1.1;letter-spacing:-0.03em;color:var(--navy);margin-bottom:1.25rem}
+h1 em{color:var(--teal);font-style:normal}
+.hero-sub{color:var(--text2);font-size:1rem;margin-bottom:2rem;line-height:1.75;max-width:440px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:9px;font-weight:600;font-size:0.9rem;text-decoration:none;transition:all 0.2s;cursor:pointer;border:none;font-family:'Inter',sans-serif}
+.btn-teal{background:var(--teal);color:#fff}.btn-teal:hover{background:var(--teal2);transform:translateY(-1px)}
+.btn-out{background:#fff;color:var(--navy);border:1.5px solid var(--border)}.btn-out:hover{border-color:var(--teal);color:var(--teal)}
+.hero-card{background:#fff;border-radius:20px;padding:2rem;box-shadow:0 4px 40px rgba(18,24,58,0.08);border:1px solid var(--border)}
+.card-title{font-size:0.72rem;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1.25rem}
+.pill{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-radius:10px;margin-bottom:8px;background:var(--light)}
+.pill-l{display:flex;align-items:center;gap:10px}
+.pill-ico{font-size:1.1rem}
+.pill-n{font-weight:600;font-size:0.87rem;color:var(--navy)}
+.pill-s{font-size:0.73rem;color:var(--text3)}
+.pill-p{font-family:'Syne',sans-serif;font-weight:700;font-size:0.92rem;color:var(--teal);white-space:nowrap}
+.sep{display:flex;gap:4px;margin:1.25rem 0}
+.sep span{width:5px;height:5px;border-radius:50%;background:var(--border)}
+.trust{display:flex;gap:1.5rem}
+.t-item{text-align:center}
+.t-num{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;color:var(--navy)}
+.t-lab{font-size:0.7rem;color:var(--text3);line-height:1.3;max-width:60px}
+.sec{padding:90px 2rem}
+.sec-light{background:var(--light)}
+.sec-in{max-width:1080px;margin:0 auto}
+.tag{display:inline-block;font-size:0.72rem;font-weight:700;color:var(--teal);letter-spacing:0.12em;text-transform:uppercase;background:#eaf9f5;padding:4px 12px;border-radius:100px;margin-bottom:0.75rem}
+h2{font-family:'Syne',sans-serif;font-size:clamp(1.7rem,2.8vw,2.3rem);font-weight:800;line-height:1.15;letter-spacing:-0.025em;color:var(--navy);margin-bottom:0.75rem}
+.sdesc{color:var(--text2);font-size:0.95rem;max-width:520px;line-height:1.75;margin-bottom:3rem}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.pc{background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:1.75rem;transition:all 0.25s;display:flex;flex-direction:column;position:relative}
+.pc:hover{border-color:var(--teal);box-shadow:0 8px 32px rgba(0,184,150,0.1);transform:translateY(-3px)}
+.pc.star{border-color:var(--teal)}
+.sbadge{position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--teal);color:#fff;font-size:0.68rem;font-weight:700;padding:4px 14px;border-radius:0 0 10px 10px;white-space:nowrap}
+.pico{font-size:2rem;margin-bottom:1rem;display:block;margin-top:0.25rem}
+.pn{font-family:'Syne',sans-serif;font-weight:800;font-size:1.15rem;color:var(--navy);margin-bottom:0.5rem}
+.pd{font-size:0.84rem;color:var(--text2);margin-bottom:1.25rem;line-height:1.6;flex:1}
+.pb{background:var(--light);border-radius:10px;padding:1rem;margin-bottom:1.25rem}
+.pl{display:flex;justify-content:space-between;align-items:center;font-size:0.84rem;padding:3px 0}
+.pt{color:var(--text2)}.pv{font-family:'Syne',sans-serif;font-weight:700;color:var(--navy);font-size:0.94rem}
+.fs{display:flex;flex-direction:column;gap:6px;margin-bottom:1.5rem}
+.fi{font-size:0.81rem;color:var(--text2);display:flex;align-items:flex-start;gap:7px}
+.fi::before{content:'✓';color:var(--teal);font-weight:700;flex-shrink:0;margin-top:1px}
+.pbtn{display:block;text-align:center;background:var(--navy);color:#fff;padding:11px;border-radius:9px;text-decoration:none;font-size:0.84rem;font-weight:600;transition:background 0.2s;cursor:pointer;border:none;font-family:'Inter',sans-serif;margin-top:auto}
+.pbtn:hover{background:var(--teal)}
+.packs{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2.5rem}
+.pack{background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;transition:border-color 0.2s}
+.pack:hover{border-color:var(--teal)}
+.pk-n{font-weight:600;font-size:0.9rem;color:var(--navy);margin-bottom:2px}
+.pk-s{font-size:0.77rem;color:var(--text3)}
+.pk-p{font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;color:var(--teal);white-space:nowrap}
+.sgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.sv{background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:1.5rem;transition:all 0.2s;display:flex;gap:1rem;align-items:flex-start}
+.sv:hover{border-color:var(--teal);box-shadow:0 4px 20px rgba(0,184,150,0.07)}
+.sico{font-size:1.4rem;flex-shrink:0}
+.sn{font-weight:600;font-size:0.91rem;color:var(--navy);margin-bottom:4px}
+.sd{font-size:0.81rem;color:var(--text2);line-height:1.55;margin-bottom:8px}
+.sp{font-size:0.85rem;font-weight:700;color:var(--teal)}
+.agrid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.creds{display:flex;flex-direction:column;gap:1rem;margin-top:2rem}
+.cred{background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:1.1rem 1.25rem;display:flex;gap:12px;align-items:flex-start}
+.cico{font-size:1.2rem;flex-shrink:0}
+.ct{font-weight:600;font-size:0.87rem;color:var(--navy);margin-bottom:3px}
+.cd{font-size:0.77rem;color:var(--text2);line-height:1.5}
+.notice{background:#fff8f0;border:1.5px solid #fdd9b5;border-radius:10px;padding:1rem 1.25rem;margin-top:1rem}
+.nt{font-size:0.79rem;font-weight:700;color:#c97b2a;margin-bottom:4px}
+.nd{font-size:0.78rem;color:#9a6230;line-height:1.55}
+.abody{color:var(--text2);font-size:0.93rem;line-height:1.85}
+.abody p{margin-bottom:1rem}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.citems{display:flex;flex-direction:column;gap:1rem;margin-top:1.5rem}
+.ci{display:flex;align-items:flex-start;gap:12px}
+.ciico{width:36px;height:36px;background:#eaf9f5;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem}
+.cil{font-size:0.77rem;color:var(--text3);margin-bottom:2px}
+.civ{font-size:0.87rem;font-weight:500;color:var(--navy)}
+.civ a{color:var(--teal);text-decoration:none}
+.fbox{background:#fff;border:1.5px solid var(--border);border-radius:18px;padding:2rem}
+.fg{margin-bottom:1.1rem}
+label{display:block;font-size:0.77rem;font-weight:600;color:var(--text2);margin-bottom:5px;letter-spacing:0.02em}
+input,textarea,select{width:100%;background:var(--light);border:1.5px solid var(--border);border-radius:8px;padding:10px 14px;color:var(--text);font-family:'Inter',sans-serif;font-size:0.87rem;transition:border-color 0.2s;outline:none}
+input:focus,textarea:focus,select:focus{border-color:var(--teal);background:#fff}
+textarea{resize:vertical;min-height:90px}
+footer{background:var(--navy);padding:3rem 2rem;text-align:center}
+.flogo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;color:#fff}
+.flogo em{color:var(--teal);font-style:normal}
+.ftxt{font-size:0.79rem;color:rgba(255,255,255,0.4);margin-top:0.5rem;line-height:1.7}
+@media(max-width:800px){.hero-inner,.agrid,.cgrid{grid-template-columns:1fr}.pgrid{grid-template-columns:1fr}.packs,.sgrid{grid-template-columns:1fr}.hero-bg{display:none}.nav-links{display:none}.hero{padding:110px 1.5rem 60px}.sec{padding:60px 1.5rem}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="#inicio" style="display:flex;align-items:center;gap:10px"><img src="logo.svg" alt="Jordi Tech-Service" style="height:42px;width:42px;border-radius:50%"><span>Jordi<em>Tech</em>-Service</span></a>
+    <div class="nav-links">
+      <a href="#software" data-es="Software" data-ca="Programari">Software</a>
+      <a href="#servicios" data-es="Servicios" data-ca="Serveis">Servicios</a>
+      <a href="#nosotros" data-es="Quién soy" data-ca="Qui soc">Quién soy</a>
+      <a href="#contacto" data-es="Contacto" data-ca="Contacte">Contacto</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-switch">
+        <button class="lang-btn active" onclick="setLang('es')">ES</button>
+        <button class="lang-btn" onclick="setLang('ca')">CA</button>
+      </div>
+      <a href="#contacto" class="nav-cta" data-es="Contactar" data-ca="Contactar">Contactar</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge"><span class="dot"></span><span data-es="Perito Judicial · Inscrito en todos los Juzgados de España" data-ca="Pèrit Judicial · Inscrit a tots els Jutjats d'Espanya">Perito Judicial · Inscrito en todos los Juzgados de España</span></div>
+      <h1 data-es="Recupero datos,<br>reparo sistemas,<br><em>pericio en juzgados</em>" data-ca="Recupero dades,<br>reparo sistemes,<br><em>pericio als jutjats</em>">Recupero datos,<br>reparo sistemas,<br><em>pericio en juzgados</em></h1>
+      <p class="hero-sub" data-es="Software desarrollado y probado con discos reales de familiares y amigos, funcionando correctamente según lo especificado. Formación certificada en recuperación, clonación y borrado de datos. Versión escritorio y USB portátil." data-ca="Programari desenvolupat i provat amb discos reals de familiars i amics, funcionant correctament segons l'especificat. Formació certificada en recuperació, clonació i esborrat de dades. Versió escriptori i USB portàtil.">Software desarrollado y probado con discos reales de familiares y amigos, funcionando correctamente según lo especificado. Formación certificada en recuperación, clonación y borrado de datos. Versión escritorio y USB portátil.</p>
+      <div class="btns">
+        <a href="#software" class="btn btn-teal" data-es="Ver software →" data-ca="Veure programari →">Ver software →</a>
+        <a href="#contacto" class="btn btn-out" data-es="Solicitar servicio" data-ca="Sol·licitar servei">Solicitar servicio</a>
+      </div>
+    </div>
+    <div>
+      <div class="hero-card">
+        <div class="card-title" data-es="Mis herramientas" data-ca="Les meves eines">Mis herramientas</div>
+        <div class="pill"><div class="pill-l"><span class="pill-ico">🔍</span><div><div class="pill-n">RecuperaPRO</div><div class="pill-s" data-es="Recuperación + borrado seguro" data-ca="Recuperació + esborrat segur">Recuperación + borrado seguro</div></div></div><div class="pill-p">Precio a consultar</div></div>
+        <div class="pill"><div class="pill-l"><span class="pill-ico">🛡️</span><div><div class="pill-n">AuditorPRO</div><div class="pill-s" data-es="Auditoría de seguridad informática" data-ca="Auditoria de seguretat informàtica">Auditoría de seguridad informática</div></div></div><div class="pill-p">Precio a consultar</div></div>
+        <div class="pill"><div class="pill-l"><span class="pill-ico">🤖</span><div><div class="pill-n">PrivBox AI</div><div class="pill-s" data-es="IA local, sin nube, sin suscripciones" data-ca="IA local, sense núvol, sense subscripcions">IA local, sin nube, sin suscripciones</div></div></div><div class="pill-p" data-es="Ver precio" data-ca="Veure preu">Ver precio</div></div>
+        <div class="sep"><span></span><span></span><span></span></div>
+        <div class="trust">
+          <div class="t-item"><div class="t-num">4</div><div class="t-lab" data-es="Estándares borrado" data-ca="Estàndards esborrat">Estándares borrado</div></div>
+          <div class="t-item"><div class="t-num">PDF</div><div class="t-lab" data-es="Certificado" data-ca="Certificat">Certificado</div></div>
+          <div class="t-item"><div class="t-num">USB</div><div class="t-lab" data-es="Versión portátil" data-ca="Versió portàtil">Versión portátil</div></div>
+          <div class="t-item"><div class="t-num">⚖️</div><div class="t-lab" data-es="Perito judicial" data-ca="Pèrit judicial">Perito judicial</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-light" id="software">
+  <div class="sec-in">
+    <div class="tag" data-es="SOFTWARE" data-ca="PROGRAMARI">SOFTWARE</div>
+    <h2 data-es="Herramientas para trabajo real" data-ca="Eines per a treball real">Herramientas para trabajo real</h2>
+    <p class="sdesc" data-es="Probado con discos reales de familiares y amigos, funciona correctamente. Sin certificación oficial todavía. Disponible en versión escritorio y USB portátil." data-ca="Provat amb discos reals de familiars i amics, funciona correctament. Sense certificació oficial encara. Disponible en versió escriptori i USB portàtil.">Probado con discos reales de familiares y amigos, funciona correctamente. Sin certificación oficial todavía. Disponible en versión escritorio y USB portátil.</p>
+    <div class="pgrid">
+      <div class="pc star">
+        <div class="sbadge" data-es="⭐ Más vendido" data-ca="⭐ Més venut">⭐ Más vendido</div>
+        <span class="pico">🔍</span>
+        <div class="pn">RecuperaPRO</div>
+        <p class="pd" data-es="Recuperación de datos con borrado seguro certificado. HDD, SSD y NVMe. Incluye visor HEX, análisis SMART y certificado PDF de borrado." data-ca="Recuperació de dades amb esborrat segur certificat. HDD, SSD i NVMe. Inclou visor HEX, anàlisi SMART i certificat PDF d'esborrat.">Recuperación de datos con borrado seguro certificado. HDD, SSD y NVMe. Incluye visor HEX, análisis SMART y certificado PDF de borrado.</p>
+        <div class="pb">
+          <div class="pl"><span class="pt" data-es="Escritorio" data-ca="Escriptori">Escritorio</span><span class="pv" style="color:var(--text3);font-size:0.8rem">A consultar</span></div>
+          <div class="pl"><span class="pt" data-es="USB portátil" data-ca="USB portàtil">USB portátil</span><span class="pv" style="color:var(--text3);font-size:0.8rem">A consultar</span></div>
+          <div class="pl"><span class="pt" data-es="Pack completo" data-ca="Pack complet">Pack completo</span><span class="pv" style="color:var(--text3);font-size:0.8rem">A consultar</span></div>
+        </div>
+        <div class="fs">
+          <div class="fi" data-es="HDD, SSD, NVMe, USB, SD" data-ca="HDD, SSD, NVMe, USB, SD">HDD, SSD, NVMe, USB, SD</div>
+          <div class="fi" data-es="Borrado: Zeros, NIST, DoD, Gutmann" data-ca="Esborrat: Zeros, NIST, DoD, Gutmann">Borrado: Zeros, NIST, DoD, Gutmann</div>
+          <div class="fi" data-es="Certificado PDF de borrado" data-ca="Certificat PDF d'esborrat">Certificado PDF de borrado</div>
+          <div class="fi" data-es="Sujeto a licencia de software — ver términos" data-ca="Subjecte a llicència de programari — vegeu termes">Sujeto a licencia de software — ver términos</div>
+        </div>
+        <a href="#contacto" class="pbtn" data-es="Solicitar información" data-ca="Sol·licitar informació">Solicitar información</a>
+      </div>
+      <div class="pc">
+        <span class="pico">🛡️</span>
+        <div class="pn">AuditorPRO</div>
+        <p class="pd" data-es="Auditoría de seguridad informática para empresas. Detecta vulnerabilidades, analiza la red y genera informes exportables en PDF y HTML." data-ca="Auditoria de seguretat informàtica per a empreses. Detecta vulnerabilitats, analitza la xarxa i genera informes exportables en PDF i HTML.">Auditoría de seguridad informática para empresas. Detecta vulnerabilidades, analiza la red y genera informes exportables en PDF y HTML.</p>
+        <div class="pb">
+          <div class="pl"><span class="pt" data-es="Escritorio" data-ca="Escriptori">Escritorio</span><span class="pv" style="color:var(--text3);font-size:0.8rem">A consultar</span></div>
+          <div class="pl"><span class="pt" data-es="USB portátil" data-ca="USB portàtil">USB portátil</span><span class="pv" style="color:var(--text3);font-size:0.8rem">A consultar</span></div>
+          <div class="pl"><span class="pt" data-es="Pack completo" data-ca="Pack complet">Pack completo</span><span class="pv" style="color:var(--text3);font-size:0.8rem">A consultar</span></div>
+        </div>
+        <div class="fs">
+          <div class="fi" data-es="Escaneo de vulnerabilidades" data-ca="Escaneig de vulnerabilitats">Escaneo de vulnerabilidades</div>
+          <div class="fi" data-es="Análisis de red y puertos" data-ca="Anàlisi de xarxa i ports">Análisis de red y puertos</div>
+          <div class="fi" data-es="Informe PDF/HTML exportable" data-ca="Informe PDF/HTML exportable">Informe PDF/HTML exportable</div>
+          <div class="fi" data-es="Sujeto a licencia de software — ver términos" data-ca="Subjecte a llicència de programari — vegeu termes">Sujeto a licencia de software — ver términos</div>
+        </div>
+        <a href="#contacto" class="pbtn" data-es="Solicitar información" data-ca="Sol·licitar informació">Solicitar información</a>
+      </div>
+      <div class="pc">
+        <span class="pico">🤖</span>
+        <div class="pn">PrivBox AI</div>
+        <p class="pd" data-es="Inteligencia artificial 100% local. Sin nube, sin suscripciones, sin filtros. Todo en tu equipo, tus datos no salen nunca." data-ca="Intel·ligència artificial 100% local. Sense núvol, sense subscripcions, sense filtres. Tot al teu equip, les teves dades no surten mai.">Inteligencia artificial 100% local. Sin nube, sin suscripciones, sin filtros. Todo en tu equipo, tus datos no salen nunca.</p>
+        <div class="pb">
+          <div class="pl"><span class="pt" data-es="Escritorio" data-ca="Escriptori">Escritorio</span><span class="pv" data-es="Ver GitHub" data-ca="Veure GitHub">Ver GitHub</span></div>
+          <div class="pl"><span class="pt" data-es="Versión local" data-ca="Versió local">Versión local</span><span class="pv" data-es="Ver GitHub" data-ca="Veure GitHub">Ver GitHub</span></div>
+        </div>
+        <div class="fs">
+          <div class="fi" data-es="100% offline, sin internet" data-ca="100% offline, sense internet">100% offline, sin internet</div>
+          <div class="fi" data-es="Sin cuotas mensuales" data-ca="Sense quotes mensuals">Sin cuotas mensuales</div>
+          <div class="fi" data-es="Privacidad total garantizada" data-ca="Privacitat total garantida">Privacidad total garantizada</div>
+          <div class="fi" data-es="Sujeto a licencia de software — ver términos" data-ca="Subjecte a llicència de programari — vegeu termes">Sujeto a licencia de software — ver términos</div>
+        </div>
+        <a href="#contacto" class="pbtn" data-es="Más información" data-ca="Més informació">Más información</a>
+      </div>
+    </div>
+    <div class="packs">
+      <div class="pack"><div><div class="pk-n" data-es="Pack Profesional USB" data-ca="Pack Professional USB">Pack Profesional USB</div><div class="pk-s" data-es="RecuperaPRO + AuditorPRO en pen drive" data-ca="RecuperaPRO + AuditorPRO en pen drive">RecuperaPRO + AuditorPRO en pen drive</div></div><div class="pk-p" style="font-size:0.9rem;color:var(--text3)">A consultar</div></div>
+      <div class="pack" style="border-color:var(--teal)"><div><div class="pk-n" data-es="Pack Forense Completo · Próximamente" data-ca="Pack Forense Complet · Pròximament">Pack Forense Completo · Próximamente</div><div class="pk-s" data-es="RecuperaPRO + AuditorPRO + ForensePRO" data-ca="RecuperaPRO + AuditorPRO + ForensePRO">RecuperaPRO + AuditorPRO + ForensePRO</div></div><div class="pk-p" style="font-size:0.9rem;color:var(--text3)">Próximamente</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="servicios">
+  <div class="sec-in">
+    <div class="tag" data-es="SERVICIOS" data-ca="SERVEIS">SERVICIOS</div>
+    <h2 data-es="Servicio técnico directo" data-ca="Servei tècnic directe">Servicio técnico directo</h2>
+    <p class="sdesc" data-es="Atiendo cada caso personalmente. Presupuesto gratuito sin compromiso." data-ca="Atenc cada cas personalment. Pressupost gratuït sense compromís.">Atiendo cada caso personalmente. Presupuesto gratuito sin compromiso.</p>
+    <div class="sgrid">
+      <div class="sv"><span class="sico">💾</span><div><div class="sn" data-es="Recuperación de datos básica" data-ca="Recuperació de dades bàsica">Recuperación de datos básica</div><p class="sd" data-es="Formateo accidental, borrado, USB corruptos. Diagnóstico incluido." data-ca="Formatat accidental, esborrat, USB corruptes. Diagnòstic inclòs.">Formateo accidental, borrado, USB corruptos. Diagnóstico incluido.</p><div class="sp">79€ – 149€</div></div></div>
+      <div class="sv"><span class="sico">🔧</span><div><div class="sn" data-es="Recuperación de datos avanzada" data-ca="Recuperació de dades avançada">Recuperación de datos avanzada</div><p class="sd" data-es="Discos dañados, RAID, NVMe corruptos, sectores defectuosos." data-ca="Discos danyats, RAID, NVMe corruptes, sectors defectuosos.">Discos dañados, RAID, NVMe corruptos, sectores defectuosos.</p><div class="sp">149€ – 299€</div></div></div>
+      <div class="sv"><span class="sico">🔍</span><div><div class="sn" data-es="Auditoría de seguridad · Pyme pequeña" data-ca="Auditoria de seguretat · Pime petita">Auditoría de seguridad · Pyme pequeña</div><p class="sd" data-es="Hasta 10 equipos. Vulnerabilidades, red, informe con recomendaciones." data-ca="Fins a 10 equips. Vulnerabilitats, xarxa, informe amb recomanacions.">Hasta 10 equipos. Vulnerabilidades, red, informe con recomendaciones.</p><div class="sp">299€ – 499€</div></div></div>
+      <div class="sv"><span class="sico">🏢</span><div><div class="sn" data-es="Auditoría de seguridad · Pyme mediana" data-ca="Auditoria de seguretat · Pime mitjana">Auditoría de seguridad · Pyme mediana</div><p class="sd" data-es="Hasta 50 equipos. Análisis completo de red, sistemas y usuarios." data-ca="Fins a 50 equips. Anàlisi completa de xarxa, sistemes i usuaris.">Hasta 50 equipos. Análisis completo de red, sistemas y usuarios.</p><div class="sp">499€ – 999€</div></div></div>
+      <div class="sv"><span class="sico">🔬</span><div><div class="sn" data-es="Análisis forense digital" data-ca="Anàlisi forense digital">Análisis forense digital</div><p class="sd" data-es="Post-incidente, metadatos, línea de tiempo, cadena de custodia." data-ca="Post-incident, metadades, línia de temps, cadena de custòdia.">Post-incidente, metadatos, línea de tiempo, cadena de custodia.</p><div class="sp">299€ – 599€</div></div></div>
+      <div class="sv"><span class="sico">⚖️</span><div><div class="sn" data-es="Informe pericial técnico" data-ca="Informe pericial tècnic">Informe pericial técnico</div><p class="sd" data-es="Para abogados. Informe documentado y defendible en sede judicial." data-ca="Per a advocats. Informe documentat i defensable en seu judicial.">Para abogados. Informe documentado y defendible en sede judicial.</p><div class="sp">199€ – 399€</div></div></div>
+      <div class="sv"><span class="sico">💬</span><div><div class="sn" data-es="Consultoría técnica" data-ca="Consultoria tècnica">Consultoría técnica</div><p class="sd" data-es="Seguridad, recuperación, protección de datos, infraestructura." data-ca="Seguretat, recuperació, protecció de dades, infraestructura.">Seguridad, recuperación, protección de datos, infraestructura.</p><div class="sp">45€ – 65€ / hora</div></div></div>
+      <div class="sv"><span class="sico">🛠️</span><div><div class="sn" data-es="Soporte del software" data-ca="Suport del programari">Soporte del software</div><p class="sd" data-es="Instalación, formación y soporte continuo para clientes del software." data-ca="Instal·lació, formació i suport continu per a clients del programari.">Instalación, formación y soporte continuo para clientes del software.</p><div class="sp">39€ / hora</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-light" id="nosotros">
+  <div class="sec-in">
+    <div class="agrid">
+      <div>
+        <div class="tag" data-es="QUIÉN SOY" data-ca="QUI SÓC">QUIÉN SOY</div>
+        <h2 data-es="Técnico independiente<br>con credenciales reales" data-ca="Tècnic independent<br>amb credencials reals">Técnico independiente<br>con credenciales reales</h2>
+        <div class="creds">
+          <div class="cred"><span class="cico">⚖️</span><div><div class="ct" data-es="Perito Judicial en Seguridad Privada" data-ca="Pèrit Judicial en Seguretat Privada">Perito Judicial en Seguridad Privada</div><div class="cd" data-es="Inscrito en todos los Juzgados de España. Especialidad: seguridad privada." data-ca="Inscrit a tots els Jutjats d'Espanya. Especialitat: seguretat privada.">Inscrito en todos los Juzgados de España. Especialidad: seguridad privada.</div></div></div>
+          <div class="cred"><span class="cico">🔧</span><div><div class="ct" data-es="Técnico en Reparación y Mantenimiento de Sistemas Microinformáticos" data-ca="Tècnic en Reparació i Manteniment de Sistemes Microinformàtics">Técnico en Reparación y Mantenimiento de Sistemas Microinformáticos</div><div class="cd" data-es="Certificado de Profesionalidad Nivel 2. Formación específica en recuperación, clonación y borrado de datos y discos." data-ca="Certificat de Professionalitat Nivell 2. Formació específica en recuperació, clonació i esborrat de dades i discos.">Certificado de Profesionalidad Nivel 2. Formación específica en recuperación, clonación y borrado de datos y discos.</div></div></div>
+          <div class="cred"><span class="cico">💻</span><div><div class="ct" data-es="Desarrollador de software especializado" data-ca="Desenvolupador de programari especialitzat">Desarrollador de software especializado</div><div class="cd" data-es="Creador de RecuperaPRO, AuditorPRO y PrivBox AI. Herramientas propias en desarrollo activo." data-ca="Creador de RecuperaPRO, AuditorPRO i PrivBox AI. Eines pròpies en desenvolupament actiu.">Creador de RecuperaPRO, AuditorPRO y PrivBox AI. Herramientas propias en desarrollo activo.</div></div></div>
+          <div class="cred"><span class="cico">📍</span><div><div class="ct" data-es="Badalona, Catalunya" data-ca="Badalona, Catalunya">Badalona, Catalunya</div><div class="cd" data-es="Presencial en área de Barcelona · Remoto para toda España." data-ca="Presencial a l'àrea de Barcelona · Remot per a tota Espanya.">Presencial en área de Barcelona · Remoto para toda España.</div></div></div>
+        </div>
+        <div class="notice">
+          <div class="nt" data-es="ℹ️ Transparencia" data-ca="ℹ️ Transparència">ℹ️ Transparencia</div>
+          <div class="nd" data-es="Soy técnico en reparación y mantenimiento de sistemas microinformáticos, con Certificado de Profesionalidad Nivel 2. No tengo titulación en ciberseguridad — mi peritaje judicial es en seguridad privada. El software ha sido probado con discos reales de familiares y amigos y funciona correctamente, pero aún no tiene licencia de software formal ni certificación oficial." data-ca="Sóc tècnic en reparació i manteniment de sistemes microinformàtics, amb Certificat de Professionalitat Nivell 2. No tinc titulació en ciberseguretat — el meu peritatge judicial és en seguretat privada. El programari s'ha provat amb discos reals de familiars i amics i funciona correctament, però encara no té llicència de programari formal ni certificació oficial.">Soy técnico en reparación y mantenimiento de sistemas microinformáticos, con Certificado de Profesionalidad Nivel 2. No tengo titulación en ciberseguridad — mi peritaje judicial es en seguridad privada. El software ha sido probado con discos reales de familiares y amigos y funciona correctamente, pero aún no tiene licencia de software formal ni certificación oficial.</div>
+        </div>
+      </div>
+      <div class="abody">
+        <p data-es="Soy técnico en reparación y mantenimiento de sistemas microinformáticos, con Certificado de Profesionalidad Nivel 2 que incluye formación específica en recuperación, clonación y borrado seguro de datos y discos duros. A partir de esa base técnica he desarrollado mis propias herramientas de software." data-ca="Sóc tècnic en reparació i manteniment de sistemes microinformàtics, amb Certificat de Professionalitat Nivell 2 que inclou formació específica en recuperació, clonació i esborrat segur de dades i discos durs. A partir d'aquesta base tècnica he desenvolupat les meves pròpies eines de programari.">Soy técnico en reparación y mantenimiento de sistemas microinformáticos, con Certificado de Profesionalidad Nivel 2 que incluye formación específica en recuperación, clonación y borrado seguro de datos y discos duros. A partir de esa base técnica he desarrollado mis propias herramientas de software.</p>
+        <p data-es="Como perito judicial inscrito en todos los Juzgados de España en la especialidad de seguridad privada, conozco el funcionamiento del sistema judicial y los requisitos de documentación y cadena de custodia. Eso aporta una perspectiva que un técnico sin experiencia judicial no suele tener." data-ca="Com a pèrit judicial inscrit a tots els Jutjats d'Espanya en l'especialitat de seguretat privada, conec el funcionament del sistema judicial i els requisits de documentació i cadena de custòdia. Això aporta una perspectiva que un tècnic sense experiència judicial normalment no té.">Como perito judicial inscrito en todos los Juzgados de España en la especialidad de seguridad privada, conozco el funcionamiento del sistema judicial y los requisitos de documentación y cadena de custodia. Eso aporta una perspectiva que un técnico sin experiencia judicial no suele tener.</p>
+        <p data-es="Trabajo directamente con el cliente, sin comerciales ni intermediarios. No tengo certificaciones de ciberseguridad todavía — lo que ofrezco es honesto: conocimiento técnico real, software propio y trato directo." data-ca="Treballo directament amb el client, sense comercials ni intermediaris. Encara no tinc certificacions de ciberseguretat — el que ofereixo és honest: coneixement tècnic real, programari propi i tracte directe.">Trabajo directamente con el cliente, sin comerciales ni intermediarios. No tengo certificaciones de ciberseguridad todavía — lo que ofrezco es honesto: conocimiento técnico real, software propio y trato directo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contacto">
+  <div class="sec-in">
+    <div class="cgrid">
+      <div>
+        <div class="tag" data-es="CONTACTO" data-ca="CONTACTE">CONTACTO</div>
+        <h2 data-es="¿Hablamos<br>de tu caso?" data-ca="Parlem<br>del teu cas?">¿Hablamos<br>de tu caso?</h2>
+        <p class="sdesc" data-es="Presupuesto gratuito y sin compromiso. Respondo en 24–48 horas laborables." data-ca="Pressupost gratuït i sense compromís. Responc en 24–48 hores laborables.">Presupuesto gratuito y sin compromiso. Respondo en 24–48 horas laborables.</p>
+        <div class="citems">
+          <div class="ci"><div class="ciico">📧</div><div><div class="cil">Email</div><div class="civ"><a href="mailto:jordi75954@gmail.com">jordi75954@gmail.com</a></div></div></div>
+          <div class="ci"><div class="ciico">📍</div><div><div class="cil" data-es="Ubicación" data-ca="Ubicació">Ubicación</div><div class="civ" data-es="Badalona, Catalunya · Remoto toda España" data-ca="Badalona, Catalunya · Remot tota Espanya">Badalona, Catalunya · Remoto toda España</div></div></div>
+          <div class="ci"><div class="ciico">🕐</div><div><div class="cil" data-es="Respuesta" data-ca="Resposta">Respuesta</div><div class="civ" data-es="24–48 horas laborables" data-ca="24–48 hores laborables">24–48 horas laborables</div></div></div>
+        </div>
+      </div>
+      <div class="fbox">
+        <div class="fg"><label data-es="Tu nombre" data-ca="El teu nom">Tu nombre</label><input type="text" id="fn"></div>
+        <div class="fg"><label>Email</label><input type="email" id="fe"></div>
+        <div class="fg">
+          <label data-es="¿Qué necesitas?" data-ca="Què necessites?">¿Qué necesitas?</label>
+          <select id="ft">
+            <option data-es="— Selecciona —" data-ca="— Selecciona —">— Selecciona —</option>
+            <option data-es="Comprar RecuperaPRO" data-ca="Comprar RecuperaPRO">Comprar RecuperaPRO</option>
+            <option data-es="Comprar AuditorPRO" data-ca="Comprar AuditorPRO">Comprar AuditorPRO</option>
+            <option data-es="Comprar PrivBox AI" data-ca="Comprar PrivBox AI">Comprar PrivBox AI</option>
+            <option data-es="Pack profesional" data-ca="Pack professional">Pack profesional</option>
+            <option data-es="Recuperación de datos" data-ca="Recuperació de dades">Recuperación de datos</option>
+            <option data-es="Auditoría de seguridad" data-ca="Auditoria de seguretat">Auditoría de seguridad</option>
+            <option data-es="Informe pericial" data-ca="Informe pericial">Informe pericial</option>
+            <option data-es="Otra consulta" data-ca="Altra consulta">Otra consulta</option>
+          </select>
+        </div>
+        <div class="fg"><label data-es="Cuéntame tu caso" data-ca="Explica'm el teu cas">Cuéntame tu caso</label><textarea id="fm" rows="4"></textarea></div>
+        <button class="btn btn-teal" style="width:100%;justify-content:center" onclick="send()" id="sbtn" data-es="Enviar mensaje →" data-ca="Enviar missatge →">Enviar mensaje →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div style="max-width:1080px;margin:0 auto">
+    <img src="logo.svg" width="64" height="64" alt="Logo" style="border-radius:50%;margin-bottom:0.75rem">
+    <div class="flogo">Jordi<em>Tech</em>-Service</div>
+    <div class="ftxt" data-es="Badalona, Catalunya · Perito Judicial en Seguridad Privada · Técnico en reparación y mantenimiento de sistemas microinformáticos" data-ca="Badalona, Catalunya · Pèrit Judicial en Seguretat Privada · Tècnic en reparació i manteniment de sistemes microinformàtics">Badalona, Catalunya · Perito Judicial en Seguridad Privada · Técnico en reparación y mantenimiento de sistemas microinformáticos</div>
+    <div class="ftxt" style="margin-top:0.4rem;font-size:0.72rem;opacity:0.4">© 2026 Jordi Tech-Service · <a href="LICENCIA_SOFTWARE.txt" style="color:rgba(255,255,255,0.5);text-decoration:underline" data-es="Términos de licencia de software" data-ca="Termes de llicència de programari">Términos de licencia de software</a></div>
+  </div>
+</footer>
+
+<script>
+let L='es';
+function setLang(l){L=l;document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));document.querySelector(`.lang-btn[onclick="setLang('${l}')"]`).classList.add('active');document.querySelectorAll('[data-es]').forEach(el=>{const t=el.getAttribute('data-'+l);if(!t)return;if(el.tagName==='OPTION'){el.textContent=t;return}if(t.includes('<')){el.innerHTML=t;}else{el.textContent=t;}});}
+function send(){const n=document.getElementById('fn').value.trim(),e=document.getElementById('fe').value.trim(),t=document.getElementById('ft').value,m=document.getElementById('fm').value.trim(),btn=document.getElementById('sbtn');if(!n||!e){alert(L==='es'?'Por favor rellena nombre y email.':'Si us plau omple el nom i el correu.');return;}window.location.href=`mailto:jordi75954@gmail.com?subject=${encodeURIComponent(`Contacto web${t?' - '+t:''} - ${n}`)}&body=${encodeURIComponent(`${m}\n\n---\nNombre: ${n}\nEmail: ${e}${t?'\nAsunto: '+t:''}`)}`;btn.textContent=L==='es'?'✓ Abriendo correo...':'✓ Obrint correu...';btn.style.background='#009e80';setTimeout(()=>{btn.textContent=L==='es'?'Enviar mensaje →':'Enviar missatge →';btn.style.background='';},3500);}
+</script>
+</body>
+</html>
